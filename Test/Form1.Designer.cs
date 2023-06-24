@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.programStop = new System.Windows.Forms.Button();
+            this.textTest = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // programStop
@@ -40,21 +41,31 @@
             this.programStop.Text = "Stop :)";
             this.programStop.UseVisualStyleBackColor = true;
             // 
+            // textTest
+            // 
+            this.textTest.Location = new System.Drawing.Point(12, 53);
+            this.textTest.Name = "textTest";
+            this.textTest.Size = new System.Drawing.Size(100, 20);
+            this.textTest.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(120, 47);
+            this.ClientSize = new System.Drawing.Size(120, 96);
+            this.Controls.Add(this.textTest);
             this.Controls.Add(this.programStop);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.Button programStop;
+        private System.Windows.Forms.TextBox textTest;
     }
 }
 
