@@ -28,9 +28,13 @@ namespace Test
             worker.RunWorkerAsync();
             worker.ProgressChanged += Worker_ProgressChanged;
             worker.WorkerReportsProgress = true;
+
+
             this.FormClosing += Window_FormClosing;
 
         }
+       
+        // Verhindern vom schließen über normale Wege 
         private void Window_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel = true;
@@ -69,7 +73,7 @@ namespace Test
             int randomY = Random.Next(windowY);
             int randomX = Random.Next(windowX);
 
-            // Vergleich unserer Mausposition zum Mittelpunkt des Buttons, sollte dieser näher als 30 Pixel sein wird das Fenster zufällig auf dem Bildshcirm verschoben
+            // Vergleich unserer Mausposition zum Mittelpunkt des Buttons so das wir diesen NIEMALS erreichen können mit der Maus
             if ((Math.Abs(relativePosition.X - 48) < 49) & (Math.Abs(relativePosition.Y - 12) < 13))
             {
                 this.Left = randomX;
